@@ -26,6 +26,7 @@ export class InputFileComponent implements ControlValueAccessor {
     @Input() disabled: boolean;
     @Input() inputId: string;
     @Input() placeholder: string;
+    @Input() internalPlaceholder: string;
 
     @Input() set fileAccept(fileAccept: string) {
         this._fileAccept = fileAccept;

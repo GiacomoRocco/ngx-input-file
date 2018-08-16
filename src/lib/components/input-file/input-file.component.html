@@ -25,6 +25,7 @@
             <button mat-button inputFileDropZone class="file-button" type="button" (click)="fileInput.click()" (itemDrop)="onSelectFile($event, selectButton)"
                 (itemDragOver)="onDragOver(selectButton)" (itemDragLeave)="onDragLeave(selectButton)" [disabled]="disabled" #selectButton>
                 <mat-icon class="input-icon">add</mat-icon>
+                <span [innerHtml]="internalPlaceholder" *ngIf="internalPlaceholder"></span>
             </button>
             <input [id]="inputId" [accept]="fileAccept" hidden type="file" [attr.multiple]="fileLimit > 1 ? true : null" #fileInput (change)="onSelectFile($event.target.files, selectButton)">
         </ng-container>
