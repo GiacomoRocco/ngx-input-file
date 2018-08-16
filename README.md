@@ -54,6 +54,7 @@ These settings will overide the configuration defined with `forRoot()` method.
 | sizeLimit               | number                  | The maximum size of the file (kB). |
 | disabled                | boolean                 | Whether the component is disabled. |
 | placeholder             | string                  | The placeholder of the component. |
+| internalPlaceholder     | string                  | The internal button placeholder. |
 | ngModel/formControlname | Array<InputFile>        | Template driven or reactive form works. 
 | acceptedFile            | EventEmitter<InputFile> | Triggered when a file is accepted. |
 | deletedFile             | EventEmitter<InputFile> | Triggered when a file is deleted. |
