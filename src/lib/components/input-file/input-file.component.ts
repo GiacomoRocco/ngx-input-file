@@ -5,6 +5,7 @@ import { InputFileRejected } from '../../interfaces/input-file-rejected';
 import { InputFileRejectedReason } from '../../enums/input-file-rejected-reason';
 import { InputFileService } from '../../services/input-file.service';
 import { MatButton } from '@angular/material/button';
+import { NumberSymbol } from '@angular/common';
 
 @Component({
     selector: 'input-file',
@@ -27,6 +28,10 @@ export class InputFileComponent implements ControlValueAccessor {
     @Input() inputId: string;
     @Input() placeholder: string;
     @Input() internalPlaceholder: string;
+    @Input() width: number;
+    @Input() height: number;
+    @Input() widthPreview: number;
+    @Input() heightPreview: number;
 
     @Input() set fileAccept(fileAccept: string) {
         this._fileAccept = fileAccept;

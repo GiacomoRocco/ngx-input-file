@@ -3,9 +3,9 @@
     <div class="files-container">
 
         <ng-container *ngFor="let file of files; let i = index">
-            <div class="file-container bounce-in">
+            <div class="file-container bounce-in" [style.width.%]="widthPreview" [style.height.%]="heightPreview">
                 <button mat-button inputFileDropZone class="replace-button" type="button" (click)="fileReplace.click()" (itemDrop)="onReplaceFile($event, i,replaceButton)"
-                    [disabled]="disabled" (itemDragOver)="onDragOver(replaceButton)" (itemDragLeave)="onDragLeave(replaceButton)"
+                    [style.width.%]="widthPreview" [style.height.%]="heightPreview" [disabled]="disabled" (itemDragOver)="onDragOver(replaceButton)" (itemDragLeave)="onDragLeave(replaceButton)"
                     #replaceButton>
                     <img class="image-preview" [src]="file.preview" *ngIf="file.preview; else noPreview">
                     <ng-template #noPreview>
@@ -14,7 +14,7 @@
                     </ng-template>
 
                 </button>
-                <button mat-button class="delete-button" type="button" (click)="onDeleteFile(i)" [disabled]="disabled">
+                <button mat-button class="delete-button" [style.width.%]="widthPreview" type="button" (click)="onDeleteFile(i)" [disabled]="disabled">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
@@ -23,9 +23,10 @@
 
         <ng-container *ngIf="canAddFile">
             <button mat-button inputFileDropZone class="file-button" type="button" (click)="fileInput.click()" (itemDrop)="onSelectFile($event, selectButton)"
-                (itemDragOver)="onDragOver(selectButton)" (itemDragLeave)="onDragLeave(selectButton)" [disabled]="disabled" #selectButton>
+                (itemDragOver)="onDragOver(selectButton)" (itemDragLeave)="onDragLeave(selectButton)" [style.width.%]="width" [style.height.%]="height"
+                 [disabled]="disabled" #selectButton>
                 <mat-icon class="input-icon">add</mat-icon>
-                <span [innerHtml]="internalPlaceholder" *ngIf="internalPlaceholder"></span>
+                <div [innerHtml]="internalPlaceholder" *ngIf="internalPlaceholder"></div>
             </button>
             <input [id]="inputId" [accept]="fileAccept" hidden type="file" [attr.multiple]="fileLimit > 1 ? true : null" #fileInput (change)="onSelectFile($event.target.files, selectButton)">
         </ng-container>
