@@ -1,6 +1,6 @@
-<div class="input-file-container">
+<div class="input-file-container" [style.width.%]="width" [style.height.%]="height">
     <label class="mat-orphan-label" [for]="inputId" [class.active]="files?.length" [innerHtml]="placeholder" *ngIf="placeholder"></label>
-    <div class="files-container">
+    <div class="files-container" [style.width.%]="width" [style.height.%]="height">
 
         <ng-container *ngFor="let file of files; let i = index">
             <div class="file-container bounce-in" [style.width.%]="widthPreview" [style.height.%]="heightPreview">
