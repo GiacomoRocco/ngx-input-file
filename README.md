@@ -55,6 +55,10 @@ These settings will overide the configuration defined with `forRoot()` method.
 | disabled                | boolean                 | Whether the component is disabled. |
 | placeholder             | string                  | The placeholder of the component. |
 | internalPlaceholder     | string                  | The internal button placeholder. |
+| width                   | number                  | Width value (%) of the add button. |
+| height                  | number                  | Height value (%) of the add button.. |
+| widthPreview            | number                  | Width value (%) of the preview/replace button. |
+| heightPreview           | number                  | Height value (%) of the preview/replace button. |
 | ngModel/formControlname | Array<InputFile>        | Template driven or reactive form works. 
 | acceptedFile            | EventEmitter<InputFile> | Triggered when a file is accepted. |
 | deletedFile             | EventEmitter<InputFile> | Triggered when a file is deleted. |
