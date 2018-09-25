@@ -24,12 +24,6 @@
     "icon"
   ],
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng-packagr -p package.json",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
   },
   "ngPackage": {
     "lib": {
